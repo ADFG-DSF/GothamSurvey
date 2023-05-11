@@ -1,0 +1,243 @@
+---
+title: "Text Analysis of Division of Sport Fish Staff comments to the Gotham Culture survey"
+author: "Adam Reimer"
+format: html
+editor: visual
+---
+
+## Introduction
+
+Gotham Culture provided a Division of Sport Fish specific report and \~30 pages of staff comments to Division Leadership in late April. The staff comments were enlightening but also contained some possibly identifying information. This text analysis of the staff comments represents an effort to share the information contained in the comments broadly while respecting staff privacy.
+
+```{r}
+#| echo: false
+#| output: false
+packs <- c("tidyverse", "stringr", "tidytext", "textdata", "RColorBrewer")
+lapply(packs, require, character.only = TRUE)
+
+input <- 
+  xlsx::read.xlsx(".\\Copy of Sport Fish survey comments_sg.xlsx", 1, as.data.frame = TRUE, header = FALSE) 
+
+# format questions
+questions <- 
+  input[grepl("^Q\\d.*", input$X1), ] %>%
+  sapply(function(x){gsub("\n", " ", x)}) %>%
+  setNames(NULL)
+q_short <- c("Q21: enhance safety/wellbeing", 
+             "Q31: increase retention", 
+             "Q35: positive job satisfaction factors", 
+             "Q36: negative job satisfaction factors", 
+             "Q40: reasons not to report", 
+             "Q41: disrespect impact", 
+             "Q48: biases oberved", 
+             "Q49: bias impact",
+             "Q54: schedule, workload, work/life")
+q_index <- c(which(grepl("^Q\\d.*", input$X1)), length(input$X1) + 1) 
+#add one so that last row has a question
+q_vector <- rep(questions, q_index[2:length(q_index)] - q_index[1:(length(q_index) - 1)])
+
+gc <- 
+  input %>%
+  mutate(question = factor(q_vector, 
+                           levels = questions, 
+                           labels = q_short, 
+                           ordered = TRUE))%>%
+  filter(!grepl("^Q\\d.*", X1)) %>%
+  tibble(response = seq_along(X1), text = X1) %>% 
+  select(-X1) 
+
+gc_word <- 
+  gc %>%
+  unnest_tokens(word, text)
+  
+gc_biword <- 
+  gc %>%
+  unnest_tokens(bigram, text, token = "ngrams", n = 2)
+```
+
+The DLT was provided with text responses to 9 questions (a total of `r max(gc$response)` responses). The complete question, an abbreviation for each question we used in subsequent figures, and the number of responses associated with each question are shown below.
+
+```{r}
+#| echo: false
+#| warning: false
+#| label: tbl-questions
+#| tbl-cap: Gotham Culture survey questions and the number of Division of Sport Fish employee responses. 
+
+gc %>%
+  group_by(question) %>%
+  summarise(n = n()) %>%
+  mutate(question_long = questions) %>%
+  select(question_long, question, n) %>%
+  knitr::kable(col.names = c("Full Question", 
+                             "Abreviated Question", 
+                             "Number of Responses"))
+```
+
+## Text Analysis - Common Words and Bi-grams
+
+One way to quantify staff comments is to tally the most frequently used words within each question. We used a technique call [text frequency-inverse document frequency](https://en.wikipedia.org/wiki/Tf%E2%80%93idf) to weight the importance of the words used in each question relative to the use of the same words throughout the entire document. Questions were omitted from @fig-words when there were no highly weighted words. The importance of adequate pay was highlighted by "monetary" being the most frequently used word in response to a question that specifically asked employees to exclude monetary considerations from their answer!
+
+```{r}
+#| echo: false
+#| message: false
+#| label: fig-words
+#| fig-cap: Most common words found in Division of Sport Fish employee responses to each survey question.
+#| fig-height: 8
+
+#Consisten color pallete
+palette <- setNames(brewer.pal(9, "Set1"), q_short)
+
+tf_idf <-
+  gc_word %>%
+  anti_join(stop_words) %>%
+  count(question, word, sort = TRUE) %>%
+  bind_tf_idf(word, question, n) %>%
+  arrange(question, desc(tf_idf))
+
+tf_idf %>%
+  arrange(desc(tf_idf)) %>%
+  group_by(question) %>%
+  top_n(11) %>%
+  mutate(stop = min(median(n), min(n))) %>%
+  filter(n > stop) %>%
+  ggplot(mapping = aes(x = tf_idf,
+                       y = reorder_within(word, tf_idf, question),
+                       fill = question)) +
+    geom_bar(alpha = 0.5, stat = "identity", show.legend = FALSE) +
+    facet_wrap(~ question, ncol = 2, scales = "free_y") +
+    xlab("Weighted Freqency of Occurrence") +
+    ylab("Most Common Words") +
+    scale_y_discrete(labels = function(x) gsub("__.+$", "", x)) +
+    scale_fill_manual(values = palette)
+
+```
+
+A related way to quantify staff comments is to look for the most common bi-grams (2 word sequences) found in the responses to each question. Questions were omitted from @fig-wordpairs when there were no bi-gram repeats.
+
+```{r}
+#| echo: false
+#| message: false
+#| label: fig-wordpairs
+#| fig-cap: Most common bi-grams found in Division of Sport Fish employee responses to each survey question.
+#| fig-height: 8
+
+GC_toppairs <- 
+  gc_biword %>%
+  separate(bigram, c("word1", "word2"), sep = " ") %>%
+  filter(!word1 %in% stop_words$word,
+         !word2 %in% stop_words$word,
+         !is.na(word1)) %>%
+  group_by(question) %>%
+  count(word1, word2, sort = TRUE)  %>%
+  top_n(6)
+
+GC_toppairs %>%
+  group_by(question) %>%
+  mutate(word = paste0(word1, " ", word2),
+         stop = min(median(n), min(n))) %>%
+  filter(n > stop) %>%
+  ggplot(aes(x = n, y = reorder_within(word, n, question), fill = question)) +
+    geom_bar(alpha = 0.5, stat = "identity", show.legend = FALSE) +
+    facet_wrap(~ question, ncol = 2, scales = "free_y") +
+    xlab("Number of Occurrences") +
+    ylab("Most Common Word Pairs") +
+    scale_y_discrete(labels = function(x) gsub("__.+$", "", x)) +
+    scale_fill_manual(values = palette)
+```
+
+## Text Analysis - Sentiment and Emotion Analysis
+
+Sentiment analysis associates words found in the staff responses with databases designed to reflect typical responses to those words. We used two databases. The [AFinn lexicon](http://www2.imm.dtu.dk/pubdb/edoc/imm6006.pdf) associates a numeric sentiment score (-5 to 5) with \~3,400 words. In this lexicon 5 represent an extremely positive sentiment, 0 is neutral, and -5 is extremely negative sentiment. The [NCR lexicon](http://www.saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm) associates 8 emotions with \~14,000 words and can associate more than one emotion with the same word. @tbl-lexicon below shows examples from each lexicon based a subset of most common words identified in @fig-words. Note these methods fail to detect sarcasm, misspelling, negation, exc..
+
+```{r}
+#| echo: false
+#| message: false
+#| label: tbl-lexicon
+#| tbl-cap: AFinn/NCR lexicon examples using words from tf_idf analysis.
+
+words_ncr <- 
+  get_sentiments("nrc") %>% 
+    pivot_wider(id_cols = word, 
+                names_from = sentiment, 
+                values_from = sentiment) %>%
+    select(-positive, -negative) %>%
+    unite(., col = "ncr",  trust:anticipation, na.rm=TRUE, sep = ",")
+
+table_sentiment <-
+  tf_idf %>%
+    group_by(question) %>%
+    arrange(question, -tf_idf) %>%
+    top_n(10) %>%
+    ungroup() %>%
+    select(word) %>%
+    sample_n(20) %>%
+    left_join(get_sentiments("afinn")) %>%
+    setNames(c("word", "afinn")) %>%
+    left_join(words_ncr) %>%
+    filter(!(is.na(afinn) & is.na(ncr)))
+  
+options(knitr.kable.NA = '')
+knitr::kable(table_sentiment,
+             col.names = c("Word", "AFinn Lexicon", "NCR Lexicon"),
+             align = c("lrr"))
+```
+
+The AFinn sentiment analysis was run on each response separately and provides a sense of the sentiment associated with each response and of the distribution of sentiments across responses within each question.
+
+```{r}
+#| echo: false
+#| message: false
+#| label: fig-afinn
+#| fig-cap: AFinn lexicon results for each Division of Sport Fish employee response.
+#| fig-height: 8
+#afinn
+gc_word %>%
+  inner_join(get_sentiments("afinn")) %>%
+  group_by(question, response) %>%
+  summarise(value = sum(value)) %>%
+  ggplot(aes(response, value, fill = question)) +
+    geom_bar(alpha = 0.5, stat = "identity", show.legend = FALSE) +
+    geom_hline(aes(yintercept = 0)) +
+    facet_wrap(~ question, ncol = 2, scales = "free")+
+    labs(x = "Response", y = "Sentiment Score") +
+    scale_fill_manual(values = palette)
+```
+
+The NCR emotion analysis was run on all responses for each question and gives a general idea of the emotional content in the responses to each question.
+
+```{r}
+#| echo: false
+#| message: false
+#| label: fig-wordspairs
+#| fig-cap: NCR lexicon results for the set of all Division of Sport Fish employee responses to each question.
+#| fig-height: 8
+#ncr
+q_shorter <- c("Q21: enhance safety", 
+               "Q31: increase retention", 
+               "Q35: positive job factors", 
+               "Q36: negative job factors", 
+               "Q40: reasons not to report", 
+               "Q41: disrespect impact", 
+               "Q48: biases oberved", 
+               "Q49: bias impact",
+               "Q54: schedule") #plots better
+full_sentiments <-
+  expand.grid(question = as.ordered(q_short), 
+              sentiment = unique(get_sentiments("nrc")$sentiment), 
+              n = 0) %>%
+  filter(!(sentiment %in% c("positive", "negative")))
+gc_word %>%
+  inner_join(get_sentiments("nrc"), by = "word", multiple = "all") %>%
+  filter(!(sentiment %in% c("positive", "negative"))) %>%
+  group_by(question, sentiment) %>%
+  summarize(n = n()) %>%
+  full_join(full_sentiments, by = c("question", "sentiment")) %>%
+  mutate(n = ifelse(is.na(n.x), n.y, n.x),
+         percent = n/sum(n)) %>%
+  ggplot(aes(as.numeric(question), percent, fill = sentiment)) +
+    geom_area() +
+    scale_x_continuous(breaks = 1:9, labels = q_shorter) +
+    labs(x = "Question", y = "Percent", fill = "Sentiment") +
+    theme(legend.position = "bottom", 
+          axis.text.x = element_text(angle = 25, vjust = 0.5, hjust=0.5))
+```

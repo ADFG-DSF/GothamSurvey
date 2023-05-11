@@ -1,13 +1,14 @@
-# Find the most common word and word pairs in teh DSF GOtham Culture survey results.
+# Find the most common word and word pairs in the DSF GOtham Culture survey results.
 
 # Author: Adam
 # Version: 2023-05-05
 
 # Packages
-packs <- c("tidyverse", "stringr", "tidytext", "textdata", "wordcloud")
+packs <- c("tidyverse", "stringr", "tidytext", "textdata", "wordcloud", "ggraph")
 lapply(packs, require, character.only = TRUE)
   
 # Parameters
+# Not Applicable
 
 # ============================================================================
 
@@ -31,7 +32,7 @@ q_vector <- rep(questions, q_index[2:length(q_index)] - q_index[1:(length(q_inde
 
 gc <- 
   input %>%
-  mutate(question = factor(q_vector, levels = questions, labels = q_short))%>%
+  mutate(question = factor(q_vector, levels = questions, labels = q_short, ordered = TRUE))%>%
   filter(!grepl("^Q\\d.*", X1)) %>%
   tibble(response = seq_along(X1), text = X1) %>% 
   select(-X1) 
@@ -80,18 +81,16 @@ tf_idf <-
 tf_idf %>%
   # We need to sort the data in descending order so we can create the factors for each term
   arrange(desc(tf_idf)) %>%
-  # Select just the top 5 words for each model
   group_by(question) %>%
   top_n(11) %>%
-  #group_by(question) %>%
   mutate(stop = min(median(n), min(n))) %>%
   filter(n > stop) %>%
   ggplot(mapping = aes(x = tf_idf, y = reorder_within(word, tf_idf, question), fill = question)) +
-  geom_bar(alpha = 0.5, stat = "identity", show.legend = FALSE) +
-  facet_wrap(~ question, scales = "free_y") +
-  xlab("Weighted Freqency of Occurrence") +
-  ylab("Most Common Words") +
-  scale_y_discrete(labels = function(x) gsub("__.+$", "", x))
+    geom_bar(alpha = 0.5, stat = "identity", show.legend = FALSE) +
+    facet_wrap(~ question, scales = "free_y") +
+    xlab("Weighted Freqency of Occurrence") +
+    ylab("Most Common Words") +
+    scale_y_discrete(labels = function(x) gsub("__.+$", "", x))
 
 # * Cloud -------------------------------------------------------------------
 
@@ -102,6 +101,24 @@ gc_word %>%
   with(wordcloud(word, n, min.freq = 10, colors = brewer.pal(8, "Dark2")))
 
 # * sentiment analysis -----------------------------------------------------
+
+words_ncr <- 
+  get_sentiments("nrc") %>% 
+    pivot_wider(id_cols = word, names_from = sentiment, values_from = sentiment) %>%
+    unite(., col = "ncr",  trust:anticipation, na.rm=TRUE, sep = ",")
+
+tf_idf %>%
+  group_by(question) %>%
+  arrange(question, -tf_idf) %>%
+  top_n(10) %>%
+  ungroup() %>%
+  select(word) %>%
+  left_join(get_sentiments("afinn")) %>%
+  setNames(c("word", "afinn")) %>%
+  left_join(words_ncr) %>%
+  filter(!(is.na(afinn) & is.na(ncr))) %>%
+  print(n = 100)
+  
 
 #bing
 gc_word %>%
@@ -122,20 +139,34 @@ gc_word %>%
   group_by(question, response) %>%
   summarise(value = sum(value)) %>%
   ggplot(aes(response, value, fill = question)) +
-    geom_bar(alpha = 0.5, stat = "identity", show.legend = FALSE) +
-    geom_hline(aes(yintercept = 0)) +
-    facet_wrap(~ question, ncol = 2, scales = "free")
+  geom_bar(alpha = 0.5, stat = "identity", show.legend = FALSE) +
+  geom_hline(aes(yintercept = 0)) +
+  facet_wrap(~ question, ncol = 2, scales = "free")
 
 #ncr
+q_shorter <- c("Q21: enhance safety", "Q31: increase retention", "Q35: positive job factors", 
+             "Q36: negative job factors", 
+             "Q40: reasons not to report", "Q41: disrespect impact", "Q48: biases oberved", 
+             "Q49: bias impact",
+             "Q54: schedule") #plots better
+full_sentiments <-
+  expand.grid(question = as.ordered(q_short), 
+              sentiment = unique(get_sentiments("nrc")$sentiment), 
+              n = 0) %>%
+  filter(!(sentiment %in% c("positive", "negative")))
 gc_word %>%
   inner_join(get_sentiments("nrc"), by = "word", multiple = "all") %>%
+  filter(!(sentiment %in% c("positive", "negative"))) %>%
   group_by(question, sentiment) %>%
   summarize(n = n()) %>%
-  mutate(percent = n/sum(n)) %>%
-  ggplot(aes(sentiment, n, color = question, group = question)) +
-    geom_line(stat = "identity", show.legend = FALSE) +
-    facet_wrap(~ question, ncol = 3) +
-    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+  full_join(full_sentiments, by = c("question", "sentiment")) %>%
+  mutate(n = ifelse(is.na(n.x), n.y, n.x),
+         percent = n/sum(n)) %>%
+  ggplot(aes(as.numeric(question), percent, fill = sentiment)) +
+    geom_area() +
+    scale_x_continuous(breaks = 1:9, labels = q_shorter) +
+    labs(x = "Question", y = "Percent", fill = "Sentiment") +
+    theme(legend.position = "bottom", axis.text.x = element_text(angle = 25, vjust = 0.5, hjust=0.5))
 
 # Frequent word pairs -----------------------------------------------------
 
@@ -160,6 +191,21 @@ GC_toppairs %>%
     xlab("Number of Occurrences") +
     ylab("Most Common Word Pairs") +
     scale_y_discrete(labels = function(x) gsub("__.+$", "", x)) 
+
+#for quarto
+plot_toppairs <-
+  lapply(q_short, function(x){
+    GC_toppairs %>%
+      filter(question == x) %>%
+      mutate(word = paste0(word1, " ", word2),
+             stop = min(median(n), min(n))) %>%
+      filter(n > stop) %>%
+      ggplot(aes(x = n, y = reorder(word, n))) +
+        geom_bar(alpha = 0.5, stat = "identity", show.legend = FALSE) +
+        xlab("Number of Occurrences") +
+        ylab(NULL) +
+        ggtitle("Word Pair Frequency")
+  })
 
 # * Network analysis --------------------------------------------------------
 
@@ -188,3 +234,4 @@ ggraph(GC_network, layout = "fr") +
   ggtitle("Word Network in DSF Gotham Culture survey Responses") +
   theme_void() 
   #theme(plot.title = element_markdown())
+

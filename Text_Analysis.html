@@ -8,7 +8,7 @@
 
 <meta name="author" content="Adam Reimer">
 
-<title>Gotham Culture Division of Sport Fish Staff comments Text Analysis</title>
+<title>Text Analysis of Division of Sport Fish Staff comments to the Gotham Culture survey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,16 +24,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="Text Analysis_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Text Analysis_files/libs/quarto-html/quarto.js"></script>
-<script src="Text Analysis_files/libs/quarto-html/popper.min.js"></script>
-<script src="Text Analysis_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="Text Analysis_files/libs/quarto-html/anchor.min.js"></script>
-<link href="Text Analysis_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Text Analysis_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="Text Analysis_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="Text Analysis_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="Text Analysis_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="Text_Analysis_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Text_Analysis_files/libs/quarto-html/quarto.js"></script>
+<script src="Text_Analysis_files/libs/quarto-html/popper.min.js"></script>
+<script src="Text_Analysis_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Text_Analysis_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Text_Analysis_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Text_Analysis_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Text_Analysis_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Text_Analysis_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Text_Analysis_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gotham Culture Division of Sport Fish Staff comments Text Analysis</h1>
+<h1 class="title">Text Analysis of Division of Sport Fish Staff comments to the Gotham Culture survey</h1>
 </div>
 
 
@@ -69,26 +69,26 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Gotham Culture provided A Division of Sport Fish specific report and 31 pages of staff comments to Division Leadership in late April. The staff comments were enlightening but also contained some confidential information. This text analysis of those comments represents an effort to share the information contained in the comments broadly while respecting staff privacy.</p>
+<p>Gotham Culture provided a Division of Sport Fish specific report and ~30 pages of staff comments to Division Leadership in late April. The staff comments were enlightening but also contained some possibly identifying information. This text analysis of the staff comments represents an effort to share the information contained in the comments broadly while respecting staff privacy.</p>
 <div class="cell">
 
 </div>
-<p>The complete question, the abbreviated question we used in subsequent figure and the number of responses associated with each question are shown in Table 1.</p>
+<p>The DLT was provided with text responses to 9 questions (a total of 836 responses). The complete question, an abbreviation for each question we used in subsequent figures, and the number of responses associated with each question are shown below.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-questions" class="anchored">
 <table class="table table-sm table-striped">
-<caption>Table&nbsp;1: Questions asked and number of responses received, DSF employees.</caption>
+<caption>Table&nbsp;1: Gotham Culture survey questions and the number of Division of Sport Fish employee responses.</caption>
 <colgroup>
-<col style="width: 79%">
-<col style="width: 18%">
-<col style="width: 1%">
+<col style="width: 77%">
+<col style="width: 15%">
+<col style="width: 7%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">question_long</th>
-<th style="text-align: left;">question</th>
-<th style="text-align: right;">n</th>
+<th style="text-align: left;">Full Question</th>
+<th style="text-align: left;">Abreviated Question</th>
+<th style="text-align: right;">Number of Responses</th>
 </tr>
 </thead>
 <tbody>
@@ -134,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Q54 How does your schedule, workload, or work/life integration influence your desire to work for ADF&amp;G?</td>
-<td style="text-align: left;">Q54: schedule, workload, work/life integration</td>
+<td style="text-align: left;">Q54: schedule, workload, work/life</td>
 <td style="text-align: right;">140</td>
 </tr>
 </tbody>
@@ -142,22 +142,105 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>One way to quantify staff comments is to tally the most frequently used words within each question.</p>
+</section>
+<section id="text-analysis---common-words-and-bi-grams" class="level2">
+<h2 class="anchored" data-anchor-id="text-analysis---common-words-and-bi-grams">Text Analysis - Common Words and Bi-grams</h2>
+<p>One way to quantify staff comments is to tally the most frequently used words within each question. We used a technique call <a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf">text frequency-inverse document frequency</a> to weight the importance of the words used in each question relative to the use of the same words throughout the entire document. Questions were omitted from <a href="#fig-words">Figure&nbsp;1</a> when there were no highly weighted words. The importance of adequate pay was highlighted by “monetary” being the most frequently used word in response to a question that specifically asked employees to exclude monetary considerations from their answer!</p>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Joining with `by = join_by(word)`
-Selecting by n</code></pre>
-</div>
 <div class="cell-output-display">
 <div id="fig-words" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="Text-Analysis_files/figure-html/fig-words-1.png" class="img-fluid figure-img" width="672"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: Most common word associated with each survey question, DSF employees.</figcaption><p></p>
+<p><img src="Text_Analysis_files/figure-html/fig-words-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Most common words found in Division of Sport Fish employee responses to each survey question.</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+<p>A related way to quantify staff comments is to look for the most common bi-grams (2 word sequences) found in the responses to each question. Questions were omitted from <a href="#fig-wordpairs">Figure&nbsp;2</a> when there were no bi-gram repeats.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-wordpairs" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Text_Analysis_files/figure-html/fig-wordpairs-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2: Most common bi-grams found in Division of Sport Fish employee responses to each survey question.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="text-analysis---sentiment-and-emotion-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="text-analysis---sentiment-and-emotion-analysis">Text Analysis - Sentiment and Emotion Analysis</h2>
+<p>Sentiment analysis associates words found in the staff responses with databases designed to reflect typical responses to those words. We used two databases. The <a href="http://www2.imm.dtu.dk/pubdb/edoc/imm6006.pdf">AFinn lexicon</a> associates a numeric sentiment score (-5 to 5) with ~3,400 words. In this lexicon 5 represent an extremely positive sentiment, 0 is neutral, and -5 is extremely negative sentiment. The <a href="http://www.saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">NCR lexicon</a> associates 8 emotions with ~14,000 words and can associate more than one emotion with the same word. <a href="#tbl-lexicon">Table&nbsp;2</a> below shows examples from each lexicon based a subset of most common words identified in <a href="#fig-words">Figure&nbsp;1</a>. Note these methods fail to detect sarcasm, misspelling, negation, exc..</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-lexicon" class="anchored">
+<table class="table table-sm table-striped">
+<caption>Table&nbsp;2: AFinn/NCR lexicon examples using words from tf_idf analysis.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Word</th>
+<th style="text-align: right;">AFinn Lexicon</th>
+<th style="text-align: right;">NCR Lexicon</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">provide</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">trust</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">enjoy</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">trust,joy,anticipation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">annoyed</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">mentor</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">trust</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">crisis</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">leave</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">sadness,surprise</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The AFinn sentiment analysis was run on each response separately and provides a sense of the sentiment associated with each response and of the distribution of sentiments across responses within each question.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-afinn" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Text_Analysis_files/figure-html/fig-afinn-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3: AFinn lexicon results for each Division of Sport Fish employee response.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The NCR emotion analysis was run on all responses for each question and gives a general idea of the emotional content in the responses to each question.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-wordspairs" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Text_Analysis_files/figure-html/fig-wordspairs-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;4: NCR lexicon results for the set of all Division of Sport Fish employee responses to each question.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 
 </main>
