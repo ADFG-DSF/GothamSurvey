@@ -1,4 +1,4 @@
-# Find the most common word and word pairs in the DSF GOtham Culture survey results.
+# Find the most common word and word pairs in the DSF Gotham Culture survey results.
 
 # Author: Adam
 # Version: 2023-05-05

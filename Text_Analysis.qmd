@@ -85,6 +85,7 @@ One way to quantify staff comments is to tally the most frequently used words wi
 #| label: fig-words
 #| fig-cap: Most common words found in Division of Sport Fish employee responses to each survey question.
 #| fig-height: 8
+#| fig-width: 7
 
 #Consisten color pallete
 palette <- setNames(brewer.pal(9, "Set1"), q_short)
@@ -122,6 +123,7 @@ A related way to quantify staff comments is to look for the most common bi-grams
 #| label: fig-wordpairs
 #| fig-cap: Most common bi-grams found in Division of Sport Fish employee responses to each survey question.
 #| fig-height: 8
+#| fig-width: 7
 
 GC_toppairs <- 
   gc_biword %>%
@@ -172,11 +174,17 @@ table_sentiment <-
     top_n(10) %>%
     ungroup() %>%
     select(word) %>%
-    sample_n(20) %>%
+    distinct(word, .keep_all = TRUE) %>%
+    filter(word %in% c("safety", 
+                       "monetary", 
+                       "training", 
+                       "bias", 
+                       "moral",
+                       "disrespect",
+                       "enjoy")) %>%
     left_join(get_sentiments("afinn")) %>%
     setNames(c("word", "afinn")) %>%
-    left_join(words_ncr) %>%
-    filter(!(is.na(afinn) & is.na(ncr)))
+    left_join(words_ncr)
   
 options(knitr.kable.NA = '')
 knitr::kable(table_sentiment,
@@ -184,7 +192,7 @@ knitr::kable(table_sentiment,
              align = c("lrr"))
 ```
 
-The AFinn sentiment analysis was run on each response separately and provides a sense of the sentiment associated with each response and of the distribution of sentiments across responses within each question.
+The AFinn sentiment analysis was run on each response separately and provides a sense of the sentiment associated with each response and of the distribution of sentiments across responses within each question. Based on the AFinn lexicon words used in responses to questions involving enhanced safety, increased retention, and workload had generally positive sentiment while words used in responses to questions involving bias, reporting and disrespect had generally negative sentiment.
 
 ```{r}
 #| echo: false
@@ -205,7 +213,7 @@ gc_word %>%
     scale_fill_manual(values = palette)
 ```
 
-The NCR emotion analysis was run on all responses for each question and gives a general idea of the emotional content in the responses to each question.
+The NCR emotion analysis was run on all responses for each question and gives a general idea of the emotional content in the responses to each question. Based on the NCR lexicon words used in responses to questions involving enhanced safety, increased retention, and workload were more often associated with emotions of trust and anticipation while words used in responses to questions involving bias, reporting and disrespect were more often associated with emotion of anger.
 
 ```{r}
 #| echo: false
@@ -213,6 +221,7 @@ The NCR emotion analysis was run on all responses for each question and gives a 
 #| label: fig-wordspairs
 #| fig-cap: NCR lexicon results for the set of all Division of Sport Fish employee responses to each question.
 #| fig-height: 8
+#| fig-width: 7
 #ncr
 q_shorter <- c("Q21: enhance safety", 
                "Q31: increase retention", 
