@@ -1,6 +1,6 @@
 ---
 title: "Summary of Division of Sport Fish Staff responses to the gothamCulture survey"
-author: "Division of Sport Fisheries Leadership Team"
+author: "Division of Sport Fish Leadership Team"
 format:
   html:
     embed-resources: true
@@ -9,11 +9,11 @@ editor: visual
 
 ## Introduction
 
-gothamCulture provided a report to the Division Leadership team (DLT) in late April specific to the Division of Sport Fish (DSF) that included many data tables and a summary of findings. The tables specified different work groups, and most work groups with fewer than 5 individuals were removed to maintain confidentiality. The DLT believes that releasing the complete report could potentially identify some employees, so we have created this summary to share the results while ensuring employee anonymity.
+gothamCulture provided a report to the Division Leadership team (DLT) in late April specific to the Division of Sport Fish (DSF) that included many data tables and a summary of findings. The tables specified different work groups, and work groups with fewer than 5 individuals were removed to maintain confidentiality. The DLT believes that releasing the complete report could potentially identify some employees, so we have created this summary to share the results while ensuring employee anonymity.
 
 ## gothamCulture Overall Recommendations
 
-According to gothamCulture's report, DSF received positive feedback from respondents regarding several areas that contribute to a healthy work environment and successful recruitment and retention. These areas include satisfaction with work/life balance, fostering a welcoming culture that values individuals of all backgrounds, and effectively addressing inappropriate or disrespectful behavior. 
+According to gothamCulture's report, DSF received positive feedback from respondents regarding several areas that contribute to a healthy work environment and successful employee recruitment and retention. These areas include satisfaction with work/life balance, fostering a welcoming culture that values individuals of all backgrounds, and effectively addressing inappropriate or disrespectful behavior.
 
 gothamCulture made two recommendations for improvements which are reported here in their entirety:
 
@@ -25,23 +25,23 @@ gothamCulture made two recommendations for improvements which are reported here 
 
 ### DLT Value and Support
 
-The division leaders agree that the first recommendation raises serious concerns. We've looked at the responses to the specific question about this concern (shown in @tbl-leadership), and it's clear that some staff members don't feel valued by division leadership. Many of us on the DLT started in lower positions and worked our way up, so we understand the importance of every job class at each level within the division and the associated workload. The fact is that we could not function without each division employee, and we would fail in our mission to protect and improve Alaska\'s sport fishery resources. We sincerely apologize if we haven't always conveyed this appreciation and pledge to improve communication and transparency to foster trust.
+The division leaders agree that the first recommendation raises serious concerns. We've looked at the responses to the specific question about this concern (shown in @tbl-leadership), and it's clear that some staff members don't feel valued by division leadership. Many of us on the DLT started in lower positions and worked our way up, so we understand the importance of every job class at each level within the division and the associated workload. The fact is that we could not function without each division employee, and we would fail in our mission to protect and improve Alaska's sport fishery resources. We sincerely apologize if we haven't always conveyed this appreciation and pledge to improve communication and transparency to foster trust.
 
-The DLT has recently taken some steps towards improving communication and transparency. For example, we adopted [DLT bylaws](https://stateofalaska.sharepoint.com/:b:/r/sites/DFG/DSF/Shared%20Documents/DLT%20FILES/Sport%20Fish%20DLT%20bylaws_May2023.pdf?csf=1&web=1&e=iIdUlw) which clarify that each DLT member is responsible for being a point of contact between their staff and the DLT. We also identify an additional point of contact if you\'d prefer not going through your chain of command. Please reach out to your DLT representative or any other member of the DLT with your thoughts, ideas, or concerns. We are here to serve both the division and its staff. 
+The DLT has recently taken some steps towards improving communication and transparency. For example, we adopted [DLT bylaws](https://stateofalaska.sharepoint.com/:b:/r/sites/DFG/DSF/Shared%20Documents/DLT%20FILES/Sport%20Fish%20DLT%20bylaws_May2023.pdf?csf=1&web=1&e=iIdUlw) which clarify that each DLT member is responsible for being a point of contact between their staff and the DLT. We also identify an additional point of contact each month, via the [meeting minutes](https://stateofalaska.sharepoint.com/sites/DFG/DSF/SitePages/DIVISION-LEADERSHIP-TEAM.aspx), if you'd prefer not going through your chain of command. Please reach out to your DLT representative or any other member of the DLT with your thoughts, ideas, or concerns. We are here to serve both the division and its staff.
 
-The DLT bylaws also state that we will have in-person meetings twice a year, rotating between the three geographic regions, with the first hour devoted to interactive dialogue with regional staff. In May, we had our first in-person meeting in Fairbanks, and it was a learning experience that we hope to improve upon. Some technical adjustments we'll make include allowing more time for interactive dialogue with regional staff, resolving any technology issues beforehand, arranging seating in a more inclusive manner, and continuing to gather questions in advance. Our next in-person meeting is scheduled for November 7-9 in Juneau. 
+The DLT bylaws also state that we will have in-person meetings twice a year, rotating between the three geographic regions, with the first hour devoted to interactive dialogue with staff in the region. In May, we had our first in-person meeting in Fairbanks, and it was a learning experience that we hope to improve upon. Some technical adjustments we'll make include allowing more time for interactive dialogue with staff in the region, resolving any technology issues beforehand, arranging seating in a more inclusive manner, and continuing to gather questions in advance. Our next in-person meeting is scheduled for November 7-9 in Juneau. 
 
-One suggestion we heard in Fairbanks regarding the turnaround time for distributing DLT notes was acted upon immediately, and we will now aim to distribute the notes within 10 days of the meeting. We also heard and recognize the importance of more adaptive solutions that would contribute towards improving communication and earning trust, including DLT members spending time interacting with staff in less formal settings and actively listening to their concerns, and will strive to do better in this regard.  
+One suggestion we heard in Fairbanks regarding the turnaround time for distributing DLT notes was acted upon immediately, and we will now aim to distribute the notes within 10 days of the meeting. We also heard and recognize the importance of more adaptive solutions that would contribute towards improving communication and earning trust, including DLT members spending time interacting with staff in less formal settings and actively listening to their concerns. We will strive to do better in this regard.
 
 The gothamCulture report also included data that indicate a need for the DLT to provide justification behind our decisions (shown in @tbl-rationale). To address this, we will include a rationale statement in the DLT notes for every action item or vote going forward in the hopes that it will improve transparency. If rationale statements lack detail you desire we encourage you to reach out to a DLT member for additional explanation following each meeting.
 
 ### Workplace Flexibility
 
-The DLT understands the importance of workplace flexibility, but we don't believe the recommendation from gothamCulture for **increased** flexibility is warranted. We observed that although the issue was mentioned in the pre-survey, it didn't receive much support in the actual survey (see @tbl-flexibility). It's important to consider that the pre-survey was conducted around the time COVID restrictions were being relaxed, and some of the concerns might have been driven by anxieties about future changes rather than the current workplace conditions. This interpretation is supported by the generally positive sentiment and the focus on "trust" and "anticipation" found in the [text analysis](https://stateofalaska.sharepoint.com/:u:/r/sites/DFG/DSF/Shared%20Documents/DLT%20FILES/DSF%20Gotham%20Culture%20Survey%20Responses%20-%20Text%20Analysis.html?csf=1&web=1&e=nUAx35) of question 54 (How does your schedule, workload, or work/life integration influence your desire to work for ADF&G?). If there are any future changes regarding workplace flexibility, they are more likely to come from the Department or Administration rather than the Divisional leadership.
+The DLT understands the importance of workplace flexibility, but we don't believe the recommendation from gothamCultur increased flexibility is warranted. We observed that although the issue was mentioned in the pre-survey, it didn't receive much support in the actual survey (see @tbl-flexibility). It's important to consider that the pre-survey was conducted around the time COVID restrictions were being relaxed, and some of the concerns might have been driven by anxieties about future changes rather than the current workplace conditions. This interpretation is supported by the generally positive sentiment and the focus on "trust" and "anticipation" found in the [text analysis](https://stateofalaska.sharepoint.com/:u:/r/sites/DFG/DSF/Shared%20Documents/DLT%20FILES/DSF%20Gotham%20Culture%20Survey%20Responses%20-%20Text%20Analysis.html?csf=1&web=1&e=nUAx35) of question 54 (How does your schedule, workload, or work/life integration influence your desire to work for ADF&G?). If there are any future changes regarding workplace flexibility, they are more likely to come from the Department or Administration rather than the Divisional leadership.
 
 ## gothamCulture Near-Term Retention Recommendations
 
-The DLT understands the largest issues driving near-term retention are monetary compensation and Tier 4 retirement benefits provided to newer employees. Staff made this clear when afforded the opportunity (See word and bi-gram frequency analysis in response to question 31 in the [text analysis](https://stateofalaska.sharepoint.com/:u:/r/sites/DFG/DSF/Shared%20Documents/DLT%20FILES/DSF%20Gotham%20Culture%20Survey%20Responses%20-%20Text%20Analysis.html?csf=1&web=1&e=nUAx35)). Compensation and retirement benefit disparities are an executive/legislative issue best addressed by supporting our unions in the collective bargaining process. 
+The DLT understands the largest issues driving near-term retention are monetary compensation and Tier 4 retirement benefits provided to newer employees. Staff made this clear when afforded the opportunity (See word and bi-gram frequency analysis in response to question 31 in the [text analysis](https://stateofalaska.sharepoint.com/:u:/r/sites/DFG/DSF/Shared%20Documents/DLT%20FILES/DSF%20Gotham%20Culture%20Survey%20Responses%20-%20Text%20Analysis.html?csf=1&web=1&e=nUAx35)). Compensation and retirement benefit disparities are an executive/legislative issue best addressed by supporting our unions in the collective bargaining process.
 
 gothamCulture recommendations regarding near-term turnover of division staff ignore this consideration. Without devaluing the largest issue, we repeat these recommendations in full below:
 
@@ -53,7 +53,7 @@ gothamCulture recommendations regarding near-term turnover of division staff ign
 
 ### DLT Value and Support (Recommendation #1)
 
-As stated above, the DLT is attempting to address this issue moving forward. The Division [employee recognition program](https://stateofalaska.sharepoint.com/sites/DFG/DSF/SitePages/DIRECTOR'S-AWARDS.aspx) has been in place for over two decades and was recently refined, and we continue to receive positive feedback following the awards ceremony each year. Additionally, the director is committed to sending regular email updates to communicate what activities he has partaken in, what he has learned, and to identify his priorities as they relate to the [Division of Sport Fish Strategic Plan](https://www.adfg.alaska.gov/static/fishing/PDFs/sport/Strategic_Plan.pdf).
+As stated above, the DLT is attempting to address this issue moving forward. The Division [employee recognition program](https://stateofalaska.sharepoint.com/sites/DFG/DSF/SitePages/DIRECTOR'S-AWARDS.aspx) has been in place for over two decades and was recently refined, and we continue to receive positive feedback following the awards ceremony each year. Additionally, the director is committed to sending regular emails to communicate what he has learned, the activities he has engaged in, and his priorities as they relate to the [Division of Sport Fish Strategic Plan](https://www.adfg.alaska.gov/static/fishing/PDFs/sport/Strategic_Plan.pdf).
 
 ### Staff Training (Recommendation #2)
 
@@ -61,17 +61,17 @@ Support for this recommendation can be found in @tbl-skills. The DLT recently ap
 
 The DLT recognizes we could also do a better job of training employees from within our ranks. Research and Technical Services (RTS) is attempting to revive [in-house training opportunities](https://stateofalaska.sharepoint.com/teams/DFGSPFRTSEmployeeDevelopmentTeam/SitePages/Internal-Training.aspx). The DLT will also identify and expand other sources of on-the-job training within Divisional or Regional budget constraints and explore opportunities for on-the-job mentoring or cross-training in various programs or essential processes such as Board of Fisheries. If you have other ideas, please communicate those to us for consideration.
 
-Additionally, the Division over the last several years has created several career ladder (or flexed) positions to help with recruitment and provide growth opportunities for specific job classes including Biometricians, Fishery Management and Research Biologists, GIS Analysts, Research Analysts, and Information Officers. Each flexed position has an associated training plan that includes the knowledge, skills, abilities, and experiences individuals need to progress up the career ladder in that job class providing measurable steps to advance. In addition, the State of Alaska provides an opportunity for employees and their supervisors through Aspire Alaska\'s annual performance planning to create an individual development plan for the employee that specifies expectations, SMART goals, and professional development activities that each individual employee will complete annually to contribute to their professional growth and development. 
+Additionally, the Division over the last several years has created several career ladder (or flexed) positions to help with recruitment and provide growth opportunities for specific job classes including Biometricians, Fishery Management and Research Biologists, GIS Analysts, Research Analysts, and Information Officers. Each flexed position has an associated training plan that includes the knowledge, skills, abilities, and experiences individuals need to progress up the career ladder in that job class providing measurable steps to advance. In addition, the State of Alaska provides an opportunity for employees and their supervisors through Aspire Alaska's annual performance planning to create an individual development plan for the employee that specifies expectations, SMART goals, and professional development activities that each individual employee will complete annually to contribute to their professional growth and development.
 
 ### Bias and Bullying
 
-In their report, gothamCulture states, \"*For SPF, the survey data suggests the biggest drivers of turnover risk are bullying behavior and a lack of inclusive decision-making.*\", which differs from their recommendations. That said, while there were numerous survey questions that address bias and bullying the DLT believes that releasing the specific tables associated with those questions may make it easy for individuals to be identified. We have chosen not to release those tables to protect employee anonymity.
+In their report, gothamCulture states, "*For SPF, the survey data suggests the biggest drivers of turnover risk are bullying behavior and a lack of inclusive decision-making.*", which differs from their recommendations. That said, while there were numerous survey questions that address bias and bullying the DLT believes that releasing the specific tables associated with those questions may make it easy for individuals to be identified. We have chosen not to release those tables to protect employee anonymity.
 
-Nevertheless, it is important to emphasize that bias and bullying will not be tolerated in the Division of Sport Fish. One concerning discovery from the report is that some staff members do not report such behavior. We strongly encourage you to report any inappropriate behavior you witness or experience. Reporting is crucial in addressing and changing the culture of bias and bullying. Please report inappropriate behavior you see or experience!  If you see it, hear it, or experience it, report it.  Changing the culture and behavior of bias and bullying starts with documenting and identifying situations and events.
+Nevertheless, it is important to emphasize that bias and bullying will not be tolerated in the Division of Sport Fish. One concerning discovery from the report is that some staff members do not report such behavior. We strongly encourage you to report any inappropriate behavior you witness or experience. [Reporting](https://app.talktospot.com/flows) is crucial in addressing and changing the culture of bias and bullying. Please [report](https://app.talktospot.com/flows) inappropriate behavior you see or experience! If you see it, hear it, or experience it, report it. Changing the culture and behavior of bias and bullying starts with documenting and identifying situations and events.
 
 ## Closing
 
-Meaningful change will take time and require both commitment and effort from all staff within the division. The DLT looks forward to continuing to support the positive aspects of our work culture and managing our collective strengths to work towards a safe, healthy, and supportive work environment where each of us can, and are supported/encouraged to, meet our professional goals.  
+Meaningful change will take time and require both commitment and effort from all staff within the division. The DLT looks forward to continuing to support the positive aspects of our work culture and managing our collective strengths to work towards a safe, healthy, and supportive work environment where each of us can, and are supported and encouraged to, meet our professional goals.
 
 ## Tables
 
@@ -92,7 +92,7 @@ lapply(packs, require, character.only = TRUE)
 readRDS(".\\gCtables\\leadership_value.rds") %>%
   as.data.frame() %>%
   filter(!(Workgroup %in% 
-             c("SPF-R1 Prince of Wales Island", "SPF-R1 Yakutat"))) %>%
+             c("SPF-R1 Prince of Wales Island", "SPF-R1 Yakutat", "SPF-R3 Glennallen", "SPF-R4 Biometrics"))) %>%
     kable()
 ```
 
@@ -105,7 +105,7 @@ readRDS(".\\gCtables\\leadership_value.rds") %>%
 readRDS(".\\gCtables\\rationale.rds") %>%
     as.data.frame() %>%
     filter(!(Workgroup %in% 
-             c("SPF-R1 Prince of Wales Island", "SPF-R1 Yakutat"))) %>%
+             c("SPF-R1 Prince of Wales Island", "SPF-R1 Yakutat", "SPF-R3 Glennallen", "SPF-R4 Biometrics"))) %>%
     kable()
 ```
 
@@ -118,7 +118,7 @@ readRDS(".\\gCtables\\rationale.rds") %>%
 readRDS(".\\gCtables\\flexibility.rds") %>%
     as.data.frame() %>%
     filter(!(Workgroup %in% 
-             c("SPF-R1 Prince of Wales Island", "SPF-R1 Yakutat"))) %>%
+             c("SPF-R1 Prince of Wales Island", "SPF-R1 Yakutat", "SPF-R3 Glennallen", "SPF-R4 Biometrics"))) %>%
     kable()
 ```
 
@@ -131,6 +131,6 @@ readRDS(".\\gCtables\\flexibility.rds") %>%
 readRDS(".\\gCtables\\skills.rds") %>%
     as.data.frame() %>%
     filter(!(Workgroup %in% 
-             c("SPF-R1 Prince of Wales Island", "SPF-R1 Yakutat"))) %>%
+             c("SPF-R1 Prince of Wales Island", "SPF-R1 Yakutat", "SPF-R3 Glennallen", "SPF-R4 Biometrics"))) %>%
     kable()
 ```
