@@ -8,7 +8,7 @@ book:
   date: "June, 30, 2023"
   chapters:
     - index.qmd
-    - Survey_Summary.qmd
+    - Survey_summary.qmd
     - Text_Analysis.qmd
 
 format:
