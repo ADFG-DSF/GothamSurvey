@@ -16,7 +16,7 @@ lapply(packs, require, character.only = TRUE)
 # Import text -------------------------------------------------------------
 
 input <- 
-  xlsx::read.xlsx(".\\Copy of Sport Fish survey comments_sg.xlsx", 1, as.data.frame = TRUE, header = FALSE) 
+  xlsx::read.xlsx("H:\\My Documents\\DLT\\GothamSurvey\\Copy of Sport Fish survey comments_sg.xlsx", 1, as.data.frame = TRUE, header = FALSE) 
 
 # format questions
 questions <- 

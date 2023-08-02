@@ -15,7 +15,7 @@ lapply(packs, require, character.only = TRUE)
 # Q 37_4: I feel valued and supported by Division Leadership --------------
 #extract table
 leadership_value_raw <- 
-  extract_areas(".\\SPF Report 31 Mar 2023.pdf", pages = 38:39, "data.frame")
+  extract_areas("H:\\My Documents\\DLT\\GothamSurvey\\SPF Report 31 Mar 2023.pdf", pages = 38:39, "data.frame")
 leadership_value_raw
 leadership_value0 <- rbind(leadership_value_raw[[1]], leadership_value_raw[[2]])
 
@@ -44,7 +44,7 @@ saveRDS(leadership_value, ".\\gCtables\\leadership_value.rds")
 # Q 15: Decision makers explain rationale behind decisions --------------
 #extract table
 rationale_raw <- 
-  extract_areas(".\\SPF Report 31 Mar 2023.pdf", pages = 16:17, "data.frame")
+  extract_areas("H:\\My Documents\\DLT\\GothamSurvey\\SPF Report 31 Mar 2023.pdf", pages = 16:17, "data.frame")
 rationale_raw
 rationale0 <- rbind(rationale_raw[[1]], rationale_raw[[2]][, -2])
 
@@ -57,7 +57,7 @@ saveRDS(rationale, ".\\gCtables\\rationale.rds")
 # Q 33: ADF&G provides me with opportunities to develop my skills and prepare me for advancement  --------------
 #extract table
 skills_raw <- 
-  extract_areas(".\\SPF Report 31 Mar 2023.pdf", pages = 32:33, "data.frame")
+  extract_areas("H:\\My Documents\\DLT\\GothamSurvey\\SPF Report 31 Mar 2023.pdf", pages = 32:33, "data.frame")
 skills_raw
 skills0 <- rbind(skills_raw[[1]], skills_raw[[2]][, -c(2:3)])
 
@@ -69,7 +69,7 @@ saveRDS(skills, ".\\gCtables\\skills.rds")
 
 # Q 51: I generally have the flexibility I need with my work schedule  --------------
 #extract table
-flexibility_raw <-  extract_areas(".\\SPF Report 31 Mar 2023.pdf", pages = 56:57, "data.frame")
+flexibility_raw <-  extract_areas("H:\\My Documents\\DLT\\GothamSurvey\\SPF Report 31 Mar 2023.pdf", pages = 56:57, "data.frame")
 flexibility_raw
 flexibility0 <- rbind(flexibility_raw[[1]], flexibility_raw[[2]])
 
