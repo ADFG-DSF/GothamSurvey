@@ -1,11 +1,4 @@
----
-title: "Text Analysis of Division of Sport Fish Staff comments to the Gotham Culture survey"
-author: "Adam Reimer"
-format:
-  html:
-    embed-resources: true
-editor: visual
----
+# Text Analysis of Division of Sport Fish Staff comments to the Gotham Culture survey {#sec-text}
 
 ## Introduction
 

@@ -1,3 +1,20 @@
 project:
-  type: website
+  type: book
   output-dir: docs
+
+book:
+  title: "ADF&G Division of Sport Fisheries gothamCulture Survey Summary"
+  author: "DSF Division Leadership Team"
+  date: "June, 30, 2023"
+  chapters:
+    - index.qmd
+    - Survey_Summary.qmd
+    - Text_Analysis.qmd
+
+format:
+  html
+    
+execute: 
+  freeze: auto
+
+editor: visual

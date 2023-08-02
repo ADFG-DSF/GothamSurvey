@@ -1,8 +1,8 @@
 # GothamSurvey
 
-This repository stores files used to summarize the GothamCulture Division of Sport Fisheries survey summary and the written in answers Division of Sport Fisheries employees provided to to open ended questions within the same survey.
+This repository stores files used to summarize the gothamCulture Division of Sport Fisheries survey report and the written answers Division of Sport Fisheries employees provided to to open-ended questions within the same survey.
 
-The Network location for this repository is S:\\RTS\\Reimer\\GothamSurvey although the input files (Copy of Sport Fish survey comments_sg.xlsx and SPF Report 31 Mar 2023.pdf) are stored at H:\\My Documents\\DLT\\GothamSurvey as they contained potentially identifying information and the DLT felt they should not be released in their entirety. The input files are also stored on the DLT Private file repository on SharePoint which is a protected SharePoint drive to which all DLT members have access.
+The network location for this repository is S:\\RTS\\Reimer\\GothamSurvey although the input files (Copy of Sport Fish survey comments_sg.xlsx and SPF Report 31 Mar 2023.pdf) are stored at H:\\My Documents\\DLT\\GothamSurvey as they contained potentially identifying information and the DLT felt they should not be released in their entirety. The input files are also stored on the DLT Private file repository on SharePoint which is a protected SharePoint drive to which all DLT members have access.
 
 The folder/file structure of this repository is:
 

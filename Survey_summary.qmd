@@ -1,11 +1,4 @@
----
-title: "Summary of Division of Sport Fish Staff responses to the gothamCulture survey"
-author: "Division of Sport Fish Leadership Team"
-format:
-  html:
-    embed-resources: true
-editor: visual
----
+# Summary of Division of Sport Fish Staff responses to the gothamCulture survey {#sec-summary}
 
 ## Introduction
 
@@ -37,11 +30,11 @@ The gothamCulture report also included data that indicate a need for the DLT to 
 
 ### Workplace Flexibility
 
-The DLT understands the importance of workplace flexibility, but we don't believe the recommendation from gothamCultur increased flexibility is warranted. We observed that although the issue was mentioned in the pre-survey, it didn't receive much support in the actual survey (see @tbl-flexibility). It's important to consider that the pre-survey was conducted around the time COVID restrictions were being relaxed, and some of the concerns might have been driven by anxieties about future changes rather than the current workplace conditions. This interpretation is supported by the generally positive sentiment and the focus on "trust" and "anticipation" found in the [text analysis](https://stateofalaska.sharepoint.com/:u:/r/sites/DFG/DSF/Shared%20Documents/DLT%20FILES/DSF%20gothamCulture%20Survey%20Responses%20-%20Text%20Analysis.html?csf=1&web=1&e=imqDGU) of question 54 (How does your schedule, workload, or work/life integration influence your desire to work for ADF&G?). If there are any future changes regarding workplace flexibility, they are more likely to come from the Department or Administration rather than the Divisional leadership.
+The DLT understands the importance of workplace flexibility, but we don't believe the recommendation from gothamCultur increased flexibility is warranted. We observed that although the issue was mentioned in the pre-survey, it didn't receive much support in the actual survey (see @tbl-flexibility). It's important to consider that the pre-survey was conducted around the time COVID restrictions were being relaxed, and some of the concerns might have been driven by anxieties about future changes rather than the current workplace conditions. This interpretation is supported by the generally positive sentiment and the focus on "trust" and "anticipation" found in @sec-text, question 54 (How does your schedule, workload, or work/life integration influence your desire to work for ADF&G?). If there are any future changes regarding workplace flexibility, they are more likely to come from the Department or Administration rather than the Divisional leadership.
 
 ## gothamCulture Near-Term Retention Recommendations
 
-The DLT understands the largest issues driving near-term retention are monetary compensation and Tier 4 retirement benefits provided to newer employees. Staff made this clear when afforded the opportunity (See word and bi-gram frequency analysis in response to question 31 in the [text analysis](https://stateofalaska.sharepoint.com/:u:/r/sites/DFG/DSF/Shared%20Documents/DLT%20FILES/DSF%20gothamCulture%20Survey%20Responses%20-%20Text%20Analysis.html?csf=1&web=1&e=imqDGU)). Compensation and retirement benefit disparities are an executive/legislative issue best addressed by supporting our unions in the collective bargaining process.
+The DLT understands the largest issues driving near-term retention are monetary compensation and Tier 4 retirement benefits provided to newer employees. Staff made this clear when afforded the opportunity (See word and bi-gram frequency analysis in response to question 31 in @sec-text). Compensation and retirement benefit disparities are an executive/legislative issue best addressed by supporting our unions in the collective bargaining process.
 
 gothamCulture recommendations regarding near-term turnover of division staff ignore this consideration. Without devaluing the largest issue, we repeat these recommendations in full below:
 
