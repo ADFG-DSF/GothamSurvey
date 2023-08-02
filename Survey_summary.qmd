@@ -1,4 +1,4 @@
-# Summary of Division of Sport Fish Staff responses to the gothamCulture survey {#sec-summary}
+# Summary of Division of Sport Fish staff responses to the gothamCulture survey {#sec-summary}
 
 ## Introduction
 
@@ -30,7 +30,7 @@ The gothamCulture report also included data that indicate a need for the DLT to 
 
 ### Workplace Flexibility
 
-The DLT understands the importance of workplace flexibility, but we don't believe the recommendation from gothamCultur increased flexibility is warranted. We observed that although the issue was mentioned in the pre-survey, it didn't receive much support in the actual survey (see @tbl-flexibility). It's important to consider that the pre-survey was conducted around the time COVID restrictions were being relaxed, and some of the concerns might have been driven by anxieties about future changes rather than the current workplace conditions. This interpretation is supported by the generally positive sentiment and the focus on "trust" and "anticipation" found in @sec-text, question 54 (How does your schedule, workload, or work/life integration influence your desire to work for ADF&G?). If there are any future changes regarding workplace flexibility, they are more likely to come from the Department or Administration rather than the Divisional leadership.
+The DLT understands the importance of workplace flexibility, but we don't believe the recommendation from gothamCulture regarding increased flexibility is warranted. We observed that although the issue was mentioned in the pre-survey, it didn't receive much support in the actual survey (see @tbl-flexibility). It's important to consider that the pre-survey was conducted around the time COVID restrictions were being relaxed, and some of the concerns might have been driven by anxieties about future changes rather than the current workplace conditions. This interpretation is supported by the generally positive sentiment and the focus on "trust" and "anticipation" found in @sec-text, question 54 (How does your schedule, workload, or work/life integration influence your desire to work for ADF&G?). If there are any future changes regarding workplace flexibility, they are more likely to come from the Department or Administration rather than the Divisional leadership.
 
 ## gothamCulture Near-Term Retention Recommendations
 

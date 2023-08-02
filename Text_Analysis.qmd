@@ -1,8 +1,8 @@
-# Text Analysis of Division of Sport Fish Staff comments to the Gotham Culture survey {#sec-text}
+# Text Analysis of Division of Sport Fish staff comments to the gothamCulture survey {#sec-text}
 
 ## Introduction
 
-Gotham Culture provided a Division of Sport Fish specific report and \~30 pages of staff comments to Division Leadership in late April. The staff comments were enlightening but also contained some possibly identifying information. This text analysis of the staff comments represents an effort to share the information contained in the comments broadly while respecting staff privacy.
+gothamCulture provided a Division of Sport Fish specific report and \~30 pages of staff comments to Division Leadership in late April. The staff comments were enlightening but also contained some possibly identifying information. This text analysis of the staff comments represents an effort to share the information contained in the comments broadly while respecting staff privacy.
 
 ```{r}
 #| echo: false
@@ -56,7 +56,7 @@ The DLT was provided with text responses to 9 questions (a total of `r max(gc$re
 #| echo: false
 #| warning: false
 #| label: tbl-questions
-#| tbl-cap: Gotham Culture survey questions and the number of Division of Sport Fish employee responses. 
+#| tbl-cap: gothamCulture survey questions and the number of Division of Sport Fish employee responses. 
 
 gc %>%
   group_by(question) %>%
